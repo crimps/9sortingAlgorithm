@@ -34,12 +34,12 @@ public class BubbleSort {
     }
 
     /**
-     * 改进版冒泡排序：
+     * 改进版v1冒泡排序：
      * 改进在于如果出现一个序列，此序列基本是排好序的，如果是标准的冒泡排序，则还是需要进行不断的比较；
      * 通过一个boolean isChanged，如果一次循环中没有交换过元素，则说明已经排好序；
      * @param nums
      */
-    public void bubbleSortUp(int[] nums) {
+    public void bubbleSort_Up_V1(int[] nums) {
         ShowUtils.showLine(nums);
         boolean isChange = true;
         for(int i = 0; i < nums.length && isChange; i++) {
