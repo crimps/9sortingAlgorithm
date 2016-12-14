@@ -54,6 +54,29 @@ public class BubbleSort {
         }
     }
 
+    /**
+     * 改进版V2冒泡排序：
+     * 如果有100个数的数组，仅前面10个无序，后面90个都已排好序且都大于前面10个数字，
+     * 那么在第一趟遍历后，最后发生交换的位置必定小于10，且这个位置之后的数据必定已经有序了，
+     * 记录下这位置，第二次只要从数组头部遍历到这个位置就可以了
+     * @param nums
+     */
+    public void bubbleSort_Up_V2(int[] nums) {
+        ShowUtils.showLine(nums);
+        int lastChangeIndex = nums.length - 1;
+        for(int i = 0; i < nums.length; i++) {
+            int temp = 0;
+            for(int j = 0; j + 1 <= lastChangeIndex; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    swap(nums, j);
+                    ShowUtils.showLine(nums);
+                    temp = j;
+                }
+            }
+            lastChangeIndex = temp;
+        }
+    }
+
     private void swap(int[] nums, int k) {
         int temp = nums[k + 1];
         nums[k + 1] = nums[k];

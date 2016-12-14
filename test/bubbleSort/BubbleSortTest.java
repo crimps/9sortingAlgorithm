@@ -26,6 +26,13 @@ public class BubbleSortTest {
         long endTimeV1 = System.nanoTime();
         System.out.println("改进版V1冒泡排序用时：" + (endTimeV1 - startTimeV1));
         System.out.println("=============");
+
+        int[] num_up2 = {3, 2, 1, 4, 5};
+        long startTimeV2 = System.nanoTime();
+        bubbleSort.bubbleSort_Up_V2(num_up2);
+        long endTimeV2 = System.nanoTime();
+        System.out.println("改进版V2冒泡排序用时：" + (endTimeV2 - startTimeV2));
+        System.out.println("=============");
     }
 
 }
