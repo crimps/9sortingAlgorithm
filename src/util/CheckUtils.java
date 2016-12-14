@@ -33,7 +33,7 @@ public class CheckUtils {
         method.invoke(object.newInstance(), nums);
         long entTime = System.nanoTime();
         if (checkSortNums(nums)) {
-            System.out.println(object.getName() + "执行[" + methName + "]用时：" + (entTime - startTime) + "纳秒");
+            System.out.println(object.getName() + "执行[" + methName + "]排序(" + nums.length +"元素)用时：" + (entTime - startTime) + "纳秒");
         } else {
             System.out.println("排序错误");
         }
