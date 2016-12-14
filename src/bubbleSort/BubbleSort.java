@@ -22,12 +22,10 @@ public class BubbleSort {
      * @param nums
      */
     public void bubbleSort(int[] nums) {
-        ShowUtils.showLine(nums);
         for(int i = 0; i < nums.length; i++) {
             for(int j = 0; j + 1 < nums.length - i; j++) {
                 if (nums[j] > nums[j + 1]) {
                     swap(nums, j);
-                    ShowUtils.showLine(nums);
                 }
             }
         }
@@ -40,7 +38,6 @@ public class BubbleSort {
      * @param nums
      */
     public void bubbleSort_Up_V1(int[] nums) {
-        ShowUtils.showLine(nums);
         boolean isChange = true;
         for(int i = 0; i < nums.length && isChange; i++) {
             isChange = false;
@@ -48,7 +45,6 @@ public class BubbleSort {
                 if (nums[j] > nums[j + 1]) {
                     swap(nums, j);
                     isChange = true;
-                    ShowUtils.showLine(nums);
                 }
             }
         }
@@ -62,14 +58,12 @@ public class BubbleSort {
      * @param nums
      */
     public void bubbleSort_Up_V2(int[] nums) {
-        ShowUtils.showLine(nums);
         int lastChangeIndex = nums.length - 1;
         for(int i = 0; i < nums.length; i++) {
             int temp = 0;
             for(int j = 0; j + 1 <= lastChangeIndex; j++) {
                 if (nums[j] > nums[j + 1]) {
                     swap(nums, j);
-                    ShowUtils.showLine(nums);
                     temp = j;
                 }
             }
