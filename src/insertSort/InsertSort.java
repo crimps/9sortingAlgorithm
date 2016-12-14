@@ -18,7 +18,6 @@ import util.ShowUtils;
  */
 public class InsertSort {
     public void insertSort(int[] nums) {
-        ShowUtils.showLine(nums);
         for (int i = 1; i < nums.length; i++) {
             int temp = nums[i];
             int j = i;
@@ -27,7 +26,6 @@ public class InsertSort {
                 j--;
             }
             nums[j] = temp;
-            ShowUtils.showLine(nums);
         }
     }
 }
