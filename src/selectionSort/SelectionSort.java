@@ -19,7 +19,6 @@ import util.ShowUtils;
  */
 public class SelectionSort {
     public void selectionSort(int[] nums) {
-        ShowUtils.showLine(nums);
         for(int i = 0; i < nums.length; i++) {
             int minIndex = i;
             for(int j = i + 1; j < nums.length; j++) {
@@ -28,7 +27,6 @@ public class SelectionSort {
                 }
             }
             swap(nums, minIndex, i);
-            ShowUtils.showLine(nums);
         }
     }
 
